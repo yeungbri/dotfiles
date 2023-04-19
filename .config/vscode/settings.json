@@ -1,0 +1,30 @@
+{
+    // Builtin
+    "breadcrumbs.enabled": false,
+    "extensions.ignoreRecommendations": true,           // Silence extension reccs
+    "explorer.confirmDelete": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "explorer.confirmDragAndDrop": false,
+    "security.workspace.trust.untrustedFiles": "open",  // Do not prompt security
+    "window.newWindowDimensions": "maximized",
+    "workbench.startupEditor": "none",                  // Do not show welcome page
+    "workbench.settings.editor": "json",                // Open this json page instead of the UI
+
+    // Language specific
+    "[python]": {
+        "editor.formatOnType": true
+    },
+
+    // Extensions
+    // Autoalign only works on the first character it sees, will not apply it multiple times like : , and //
+    // Trigger with > auto-align, or use cmd+ctrl+[ (must have selection)
+    "autoalign.minSeparationLeft": 2,
+    "autoalign.moveableItems": [
+        "//"
+    ],
+    "autoalign.nonMoveableItems": [],
+
+    "vim.camelCaseMotion.enable": true,
+    // "vim.easymotion": true,
+}
