@@ -1,0 +1,7 @@
+[user]
+	name = Brian Yeung
+	email = brianyeung2011@gmail.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
