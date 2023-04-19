@@ -24,3 +24,7 @@ Works like git
 yadm add <important file>
 yadm commit
 ```
+
+## TODO
+Add .ssh
+Test all settings work with bootstrap
