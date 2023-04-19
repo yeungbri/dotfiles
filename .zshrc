@@ -39,26 +39,30 @@ eval "$(pyenv virtualenv-init -)"
 bindkey -v
 export KEYTIMEOUT=1 # Speed up cursor change
 # Fix the vim cursor
-function zle-keymap-select zle-line-init
-{
-    # change cursor shape in iTerm2
-    case $KEYMAP in
-        vicmd)      print -n -- "\E]50;CursorShape=0\C-G";;  # block cursor
-        viins|main) print -n -- "\E]50;CursorShape=1\C-G";;  # line cursor
-    esac
+# function zle-keymap-select zle-line-init
+# {
+#     # change cursor shape in iTerm2
+#     case $KEYMAP in
+#         vicmd)      print -n -- "\E]50;CursorShape=0\C-G";;  # block cursor
+#         viins|main) print -n -- "\E]50;CursorShape=1\C-G";;  # line cursor
+#     esac
 
-    zle reset-prompt
-    zle -R
-}
+#     zle reset-prompt
+#     zle -R
+# }
 
-function zle-line-finish
-{
-    print -n -- "\E]50;CursorShape=0\C-G"  # block cursor
-}
+# function zle-line-finish
+# {
+#     print -n -- "\E]50;CursorShape=0\C-G"  # block cursor
+# }
 
-zle -N zle-line-init
-zle -N zle-line-finish
-zle -N zle-keymap-select
+# zle -N zle-line-init
+# zle -N zle-line-finish
+# zle -N zle-keymap-select
+
+# Use the currently typed cmd as a prefix
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # Starship
 eval "$(starship init zsh)"

@@ -7,3 +7,5 @@ source ~/.config/nvim/colors.vim
 set splitright
 set splitbelow
 
+let g:python3_host_prog = '/Users/brian.yeung/.pyenv/versions/nvim37/bin/python'
+
