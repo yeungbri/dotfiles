@@ -10,6 +10,7 @@ antigen theme agnoster
 
 # Set plugins (plugins not part of Oh-My-Zsh can be installed using githubusername/repo)
 antigen bundle git
+antigen bundle Aloxaf/fzf-tab
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
